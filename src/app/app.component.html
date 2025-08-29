@@ -1,0 +1,177 @@
+
+<div class="flex">
+
+    <aside class="z-100 w-full lg:w-80 bg-white shadow-md lg:shadow-xl p-4 lg:p-6 flex flex-col items-center lg:items-start lg:sticky lg:top-0 h-auto lg:h-screen overflow-y-auto">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 hidden lg:block">Filtros</h2>
+
+            <!-- Breadcrumbs -->
+            <nav class="text-sm text-gray-500 hidden lg:block mb-4 flex flex-col">
+                    <label for=""> Buscar Producto </label>
+                    <input class="w-full p-2 border-1 rounded-[4px]" type="text">
+            </nav>
+
+            <div class="flex items-center justify-between w-full lg:hidden mb-4">
+                <a href="#" class="text-xl font-bold text-green-600">Tienda</a>
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-green-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            
+            <nav id="menu-nav" class="w-full mobile-menu flex flex-col lg:flex-row justify-center lg:justify-start lg:space-x-0 lg:space-y-4">
+                
+                <!-- Sección de Envío -->
+
+                <!-- Sección de Filtros -->
+                <div class="space-y-6">
+                    
+                    <!-- Día de Entrega -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Día de Entrega</h3>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="delivery-tomorrow" class="rounded text-green-600">
+                            <label for="delivery-tomorrow" class="ml-2">Recibelo Mañana</label>
+                        </div>
+                    </div>
+
+                    <!-- Género -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Género</h3>
+                        <div class="space-y-1">
+                            <div class="flex items-center"><input type="checkbox" id="hombre" class="rounded text-green-600"><label for="hombre" class="ml-2">Hombre</label></div>
+                            <div class="flex items-center"><input type="checkbox" id="mujer" class="rounded text-green-600"><label for="mujer" class="ml-2">Mujer</label></div>
+                            <div class="flex items-center"><input type="checkbox" id="ninos" class="rounded text-green-600"><label for="ninos" class="ml-2">Niños</label></div>
+                            <div class="flex items-center"><input type="checkbox" id="ninas" class="rounded text-green-600"><label for="ninas" class="ml-2">Niñas</label></div>
+                            <div class="flex items-center"><input type="checkbox" id="bebes" class="rounded text-green-600"><label for="bebes" class="ml-2">Bebés</label></div>
+                            <div class="flex items-center"><input type="checkbox" id="unisex" class="rounded text-green-600"><label for="unisex" class="ml-2">Unisex</label></div>
+                        </div>
+                    </div>
+
+                    <!-- Opiniones de los clientes -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Opiniones de los clientes</h3>
+                        <div class="flex items-center text-yellow-400">
+                            <!-- SVG de estrellas -->
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.462a1 1 0 00.95-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 20 20" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11h.01M12 11a1 1 0 010 2 1 1 0 010-2z"></path></svg>
+                            <span class="ml-2 text-gray-800">4 & más</span>
+                        </div>
+                    </div>
+
+                    <!-- Departamento -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Departamento</h3>
+                        <div class="space-y-1">
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Ropa, Zapatos y Joyería</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Camisas, Camisetas y Blusas de Mujer</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Ropa Deportiva para Hombre</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Camisas para Hombre</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Lencería y Ropa para Dormir para Mujer</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Ropa de Yoga para Mujer</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Mallas Deportivas para Mujer</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Shorts Deportivos para Mujer</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Camisas y Playeras para Niña</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Camisas para Niño</a>
+                        </div>
+                    </div>
+
+                    <!-- Precio -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Precio</h3>
+                        <p class="text-sm text-gray-600 mb-4">$1 - $2,650 y más</p>
+                        <div class="space-y-1">
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Hasta $15</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">$15 a $20</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">$20 a $30</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">$30 y Más</a>
+                        </div>
+                    </div>
+
+                    <!-- Ofertas y descuentos -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Ofertas y descuentos</h3>
+                        <div class="space-y-1">
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Oferta del día</a>
+                            <a href="#" class="block text-gray-600 hover:text-green-600">Todos los descuentos</a>
+                        </div>
+                    </div>
+
+                    <!-- Color -->
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2">Color</h3>
+                        <div class="grid grid-cols-5 gap-2">
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-black cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-blue-500 cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-purple-500 cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-yellow-500 cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-white cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-gray-500 cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                            <div class="h-8 w-8 rounded-full border border-gray-300 bg-gray-900 cursor-pointer hover:ring-2 ring-green-500 transition-all duration-200"></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+
+<div class="bg-gray-100 text-gray-800">
+
+    <header class="py-4 bg-white shadow-sm flex">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-[500] text-gray-900">Tienda Digital</h1>
+        </div>
+        <nav class="container mx-auto px-4 text-center mt-3">
+            <ul class="flex w-full justify-center gap-6">
+                <li><a href=""> Inicio </a></li>
+                <li><a href=""> Productos </a></li>
+                <li><a href=""> Comercio </a></li>
+                <li><a href=""> Usuarios </a></li>
+                <li><a href=""> Cerrar Session </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 min-w-[90%]">
+
+        <div class="lg:col-span-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            @for (product of products; track $index) {
+                <div class="relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-101 cursor-pointer">
+                    <div class="p-4">
+                        <div class="w-full flex justify-center">
+                        <img src="{{products[$index].image}}" alt="Mochila Fjallraven" class="w-full h-auto rounded-lg mb-4 object-cover max-w-[10rem]">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 leading-tight"> {{products[$index].title}} </h3>
+                        <p class="text-2xl font-bold text-gray-900 mt-2"> {{products[$index].price}} </p>
+                        <button class="mt-4 w-full bg-green-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300">Añadir al carrito</button>
+                    </div>
+
+                    <div class="absolute inset-0 z-100 bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <div class="text-black text-lg font-semibold flex items-center space-x-2">
+                        <span>Ver detalles</span>
+                    </div>
+                    
+                </div>
+
+                </div>
+            }
+
+            
+        </div>
+
+        <div class="lg:col-span-1 bg-white p-6 rounded-xl shadow-lg h-min sticky top-4">
+            <h2 class="text-2xl font-bold text-gray-900">Carrito de Compra</h2>
+            <div class="mt-4 text-center text-gray-500 space-y-2">
+                <p>Tu carrito está vacío</p>
+                <p>Añade productos a tu carrito para continuar</p>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+</div>
