@@ -7,7 +7,7 @@
             <!-- Breadcrumbs -->
             <nav class="text-sm text-gray-500 hidden lg:block mb-4 flex flex-col">
                     <label for=""> Buscar Producto </label>
-                    <input class="w-full p-2 border-1 rounded-[4px]" type="text">
+                    <input class="w-full p-2 border-1 rounded-[4px]" type="text" placeholder="Buscar...">
             </nav>
 
             <div class="flex items-center justify-between w-full lg:hidden mb-4">
@@ -21,7 +21,6 @@
             
             <nav id="menu-nav" class="w-full mobile-menu flex flex-col lg:flex-row justify-center lg:justify-start lg:space-x-0 lg:space-y-4">
                 
-                <!-- Sección de Envío -->
 
                 <!-- Sección de Filtros -->
                 <div class="space-y-6">
@@ -37,9 +36,9 @@
 
                     <!-- Género -->
                     <div class="border-b pb-4">
-                        <h3 class="font-bold text-lg mb-2">Género</h3>
+                        <h3 class="font-bold text-lg mb-2">{{listFilter.name}}</h3>
                         <div class="space-y-1">
-                            <div class="flex items-center"><input type="checkbox" id="hombre" class="rounded text-green-600"><label for="hombre" class="ml-2">Hombre</label></div>
+                            <div class="flex items-center"><input type="checkbox" id="hombre" class="rounded text-green-600"><label for="hombre" class="ml-2">{{listFilter.filter[1]}}</label></div>
                             <div class="flex items-center"><input type="checkbox" id="mujer" class="rounded text-green-600"><label for="mujer" class="ml-2">Mujer</label></div>
                             <div class="flex items-center"><input type="checkbox" id="ninos" class="rounded text-green-600"><label for="ninos" class="ml-2">Niños</label></div>
                             <div class="flex items-center"><input type="checkbox" id="ninas" class="rounded text-green-600"><label for="ninas" class="ml-2">Niñas</label></div>
@@ -121,18 +120,17 @@
 <div class="bg-gray-100 text-gray-800">
 
     <header class="py-4 bg-white shadow-sm flex">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-[500] text-gray-900">Tienda Digital</h1>
+        <div class="container mx-auto px-2 flex">
+            <img src="logo-ropa.png" class="size-11 inline-block" alt="Logo">
+            <h1 class="text-4xl font-[600] text-gray-900">Tienda Digital</h1>
         </div>
-        <nav class="container mx-auto px-4 text-center mt-3">
-            <ul class="flex w-full justify-center gap-6">
-                <li><a href=""> Inicio </a></li>
-                <li><a href=""> Productos </a></li>
-                <li><a href=""> Comercio </a></li>
-                <li><a href=""> Usuarios </a></li>
-                <li><a href=""> Cerrar Session </a></li>
-            </ul>
-        </nav>
+        <div class="container flex mx-auto px-4 text-center mt-3 gap-5">
+            <button type="button" class="cursor-pointer hover:text-gray-600"> Inicio </button>
+            <button (click)="getShowProducts()" type="button" class="cursor-pointer hover:text-gray-600"> Productos </button>
+            <button (click)="getShowProductTechnology()" class="cursor-pointer hover:text-gray-600" type="button"> Tecnologia </button>
+            <button type="button" class="cursor-pointer hover:text-gray-600"> Usuarios </button>
+            <button type="button" class="cursor-pointer hover:text-gray-600"> Cerrar Session </button>
+        </div>
     </header>
 
     <main class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 min-w-[90%]">
@@ -143,19 +141,11 @@
                 <div class="relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-101 cursor-pointer">
                     <div class="p-4">
                         <div class="w-full flex justify-center">
-                        <img src="{{products[$index].image}}" alt="Mochila Fjallraven" class="w-full h-auto rounded-lg mb-4 object-cover max-w-[10rem]">
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 leading-tight"> {{products[$index].title}} </h3>
-                        <p class="text-2xl font-bold text-gray-900 mt-2"> {{products[$index].price}} </p>
+                        <img [src]="products[$index].image"/>                        </div>
+                        <h3 class="text-1xl font-[300] text-gray-900 leading-tight"> {{products[$index].title}} </h3>
+                        <p class="text-1xl font-[600] text-gray-900 mt-2"> {{products[$index].price}} </p>
                         <button class="mt-4 w-full bg-green-600 text-white font-semibold py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300">Añadir al carrito</button>
                     </div>
-
-                    <div class="absolute inset-0 z-100 bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <div class="text-black text-lg font-semibold flex items-center space-x-2">
-                        <span>Ver detalles</span>
-                    </div>
-                    
-                </div>
 
                 </div>
             }
@@ -163,7 +153,7 @@
             
         </div>
 
-        <div class="lg:col-span-1 bg-white p-6 rounded-xl shadow-lg h-min sticky top-4">
+        <div class="lg:col-span-1 bg-white p-4 rounded-xl shadow-lg h-min sticky top-4">
             <h2 class="text-2xl font-bold text-gray-900">Carrito de Compra</h2>
             <div class="mt-4 text-center text-gray-500 space-y-2">
                 <p>Tu carrito está vacío</p>
@@ -175,3 +165,9 @@
 
 </div>
 </div>
+
+<style>
+    noMostrar {
+        display: none;
+    }
+</style>
